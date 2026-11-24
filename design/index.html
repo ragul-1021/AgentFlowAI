@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" aria-current="page">Dashboard</a>
+    <a href="live.html">Live run</a>
+    <a href="report.html">Reports</a>
+    <a href="approval.html">Approvals</a>
+    <a href="styleguide.html">System</a>
+  </nav>
+  <div class="topbar-end">
+    <span class="mono muted">3 running</span>
+    <a class="btn btn-primary" href="new.html">New research</a>
+    <span class="avatar" aria-hidden="true">MK</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="gutter" aria-label="Folio"><p class="folio">22 NOV 2026</p></aside>
+
+  <main class="main">
+
+    <p class="kicker">RUN-0142 &nbsp;·&nbsp; DRAFTING &nbsp;·&nbsp; 02:31</p>
+    <h1 class="display">Speculative decoding, tested against production traffic</h1>
+    <p class="lede">A technical article for backend engineers. Nine sources, thirty-one quotes, and every claim tied to the paragraph that supports it.</p>
+
+    <section class="runstrip" aria-label="Active run progress">
+      <div class="rail">
+        <div class="stage" data-f="done"><span class="lbl">Brief</span></div>
+        <div class="stage" data-f="done"><span class="lbl">Research</span></div>
+        <div class="stage" data-f="done"><span class="lbl">Analysis</span></div>
+        <div class="stage" data-f="done"><span class="lbl">Outline</span></div>
+        <div class="stage" data-f="now"><span class="lbl">Draft</span></div>
+        <div class="stage"><span class="lbl">Edit</span></div>
+        <div class="stage"><span class="lbl">Validate</span></div>
+        <div class="stage"><span class="lbl">Gate</span></div>
+        <div class="stage"><span class="lbl">Approve</span></div>
+      </div>
+      <div class="runfoot">
+        <span>Writing §4 of 6 &nbsp;·&nbsp; 1,480 of 2,100 words &nbsp;·&nbsp; Groq gpt-oss-120b</span>
+        <a href="live.html" style="color:var(--paper);text-decoration:none;border-bottom:1px solid var(--rule)">Open live run</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="inflight">
+      <div class="section-head">
+        <h2 id="inflight">In flight</h2>
+        <span class="mono faint">3 runs</span>
+      </div>
+      <div class="ledger">
+        <a class="row" href="live.html">
+          <span class="key">0142</span>
+          <span>
+            <span class="title">Speculative decoding, tested against production traffic</span>
+            <span class="sub">6 sections · 9 sources · 22 claims to check</span>
+          </span>
+          <span class="end"><span class="state" data-s="write"><i class="dot"></i>Drafting</span></span>
+        </a>
+        <a class="row" href="live.html">
+          <span class="key">0141</span>
+          <span>
+            <span class="title">Vector index trade-offs at fifty million chunks</span>
+            <span class="sub">4 sections · 12 sources · editing pass 1</span>
+          </span>
+          <span class="end"><span class="state" data-s="write"><i class="dot"></i>Editing</span></span>
+        </a>
+        <a class="row" href="approval.html">
+          <span class="key">0140</span>
+          <span>
+            <span class="title">EU AI Act: what shipping teams must document</span>
+            <span class="sub">6 sections · 7 sources · revision 3 of 3</span>
+          </span>
+          <span class="end"><span class="state" data-s="wait"><i class="dot"></i>Needs you</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="recent">
+      <div class="section-head">
+        <h2 id="recent">Recent reports</h2>
+        <span class="mono faint">Last 14 days</span>
+      </div>
+      <div class="ledger">
+        <a class="row" href="report.html">
+          <span class="key">0139</span>
+          <span>
+            <span class="title">Batch inference economics: where the cost curve bends</span>
+            <span class="sub">2,340 words · 8 sources · signed off 20 Nov</span>
+          </span>
+          <span class="end"><span class="state" data-s="ok"><i class="dot"></i>Approved</span></span>
+        </a>
+        <a class="row" href="report.html">
+          <span class="key">0138</span>
+          <span>
+            <span class="title">Choosing an embedding model without a benchmark budget</span>
+            <span class="sub">1,910 words · 11 sources · signed off 18 Nov</span>
+          </span>
+          <span class="end"><span class="state" data-s="ok"><i class="dot"></i>Approved</span></span>
+        </a>
+        <a class="row" href="report.html">
+          <span class="key">0137</span>
+          <span>
+            <span class="title">What retrieval evaluation actually measures</span>
+            <span class="sub">2,080 words · 6 sources · signed off 15 Nov</span>
+          </span>
+          <span class="end"><span class="state" data-s="ok"><i class="dot"></i>Approved</span></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="margin" aria-label="System status">
+    <div class="panel">
+      <h3>Engines</h3>
+      <div class="kv"><span>Gemini 3.8 Flash</span><span class="v">412 ms</span></div>
+      <div class="kv"><span>Groq gpt-oss-120b</span><span class="v">96 ms</span></div>
+      <div class="kv"><span>Tavily credits</span><span class="v">1,204</span></div>
+    </div>
+    <div class="panel">
+      <h3>Today</h3>
+      <div class="kv"><span>Runs</span><span class="v">14</span></div>
+      <div class="kv"><span>Tokens</span><span class="v">1.24M</span></div>
+      <div class="kv"><span>Spend</span><span class="v">$3.84</span></div>
+      <div class="meter" aria-hidden="true"><i style="width:38%"></i></div>
+      <p class="mono faint" style="margin:0">38% of the $10 daily ceiling</p>
+    </div>
+    <div class="panel">
+      <h3>Inks</h3>
+      <div class="legend">
+        <span><i style="background:var(--blue)"></i>Gemini — research &amp; judgement</span>
+        <span><i style="background:var(--overprint)"></i>Handoff between teams</span>
+        <span><i style="background:var(--violet)"></i>Groq — writing &amp; editing</span>
+        <span><i style="background:var(--amber)"></i>Waiting on a person</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Dashboard</a>
+    <a href="live.html">Live run</a>
+    <a href="report.html">Reports</a>
+    <a href="approval.html">Approvals</a>
+    <a href="styleguide.html" aria-current="page">System</a>
+  </nav>
+  <div class="topbar-end"><span class="avatar" aria-hidden="true">MK</span></div>
+</header>
+
+<div class="shell nomargin">
+  <aside class="gutter" aria-label="Folio"><p class="folio">SYSTEM</p></aside>
+
+  <main class="main">
+    <p class="kicker">DESIGN SYSTEM &nbsp;·&nbsp; V0.1</p>
+    <h1 class="display sm">Two inks on a proofing desk.</h1>
+    <p class="lede">Gemini marks research and judgement in blue. Groq marks writing and editing in violet. Where work passes between them the two overprint. Nothing else in the interface is allowed to use those colours.</p>
+
+    <section class="section">
+      <div class="section-head"><h2>Inks</h2><span class="mono faint">semantic, never decorative</span></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#3e7bfa"></div><div class="meta"><b>Gemini</b><code>#3E7BFA</code></div></div>
+        <div class="sw"><div class="chip" style="background:#a05cff"></div><div class="meta"><b>Groq</b><code>#A05CFF</code></div></div>
+        <div class="sw"><div class="chip" style="background:linear-gradient(90deg,#3e7bfa,#6f63ff,#a05cff)"></div><div class="meta"><b>Handoff</b><code>#6F63FF</code></div></div>
+        <div class="sw"><div class="chip" style="background:#e9b44c"></div><div class="meta"><b>Needs you</b><code>#E9B44C</code></div></div>
+        <div class="sw"><div class="chip" style="background:#c9524e"></div><div class="meta"><b>Unsupported</b><code>#C9524E</code></div></div>
+        <div class="sw"><div class="chip" style="background:#6fbf9b"></div><div class="meta"><b>Approved</b><code>#6FBF9B</code></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Ground</h2><span class="mono faint">ink on a desk, not black</span></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#071018"></div><div class="meta"><b>Page</b><code>#071018</code></div></div>
+        <div class="sw"><div class="chip" style="background:#0c1826"></div><div class="meta"><b>Panel</b><code>#0C1826</code></div></div>
+        <div class="sw"><div class="chip" style="background:#122234"></div><div class="meta"><b>Raised</b><code>#122234</code></div></div>
+        <div class="sw"><div class="chip" style="background:#1f3145"></div><div class="meta"><b>Rule</b><code>#1F3145</code></div></div>
+        <div class="sw"><div class="chip" style="background:#e9eff6"></div><div class="meta"><b>Paper</b><code>#E9EFF6</code></div></div>
+        <div class="sw"><div class="chip" style="background:#8597ab"></div><div class="meta"><b>Muted</b><code>#8597AB</code></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Type</h2><span class="mono faint">three roles</span></div>
+
+      <div class="spec">
+        <div class="s-label">NEWSREADER · DISPLAY · 56 / 1.05 / −0.022em</div>
+        <div class="s-body display" style="margin-top:10px">Evidence before prose</div>
+      </div>
+      <div class="spec">
+        <div class="s-label">NEWSREADER · READING · 18.5 / 1.68</div>
+        <div class="s-body" style="font-family:var(--serif);font-size:18.5px;line-height:1.68;color:var(--body);max-width:64ch">
+          The reader is set in a screen serif because the report, not the dashboard, is the product. Long passages get a line height that lets the eye return without effort.
+        </div>
+      </div>
+      <div class="spec">
+        <div class="s-label">SCHIBSTED GROTESK · INTERFACE · 15 / 1.5</div>
+        <div class="s-body">Controls, tables, navigation, and every sentence that is not part of a document.</div>
+      </div>
+      <div class="spec">
+        <div class="s-label">DM MONO · KEYS AND NUMBERS · 11.5</div>
+        <div class="s-body mono">RUN-0142 · 1,480 / 2,100 · [S6] · 14:11:38 · $0.21</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Parts</h2><span class="mono faint">no cards, no shadows</span></div>
+
+      <div class="spec">
+        <div class="s-label">ACTIONS</div>
+        <div class="s-body actions">
+          <button class="btn btn-primary">Approve and export</button>
+          <button class="btn">Compare versions</button>
+          <button class="btn btn-amber">Approve with the claim flagged</button>
+          <button class="btn btn-quiet">Stop run</button>
+        </div>
+      </div>
+
+      <div class="spec">
+        <div class="s-label">STATES</div>
+        <div class="s-body" style="display:flex;gap:24px;flex-wrap:wrap">
+          <span class="state" data-s="run"><i class="dot"></i>Researching</span>
+          <span class="state" data-s="write"><i class="dot"></i>Drafting</span>
+          <span class="state" data-s="wait"><i class="dot"></i>Needs you</span>
+          <span class="state" data-s="ok"><i class="dot"></i>Approved</span>
+          <span class="state" data-s="fail"><i class="dot"></i>Unsupported</span>
+        </div>
+      </div>
+
+      <div class="spec">
+        <div class="s-label">CITATION AND EVIDENCE</div>
+        <div class="s-body" style="display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:36px;align-items:start">
+          <p style="font-family:var(--serif);font-size:18px;line-height:1.7;margin:0;color:var(--body)">
+            Logs must be kept for at least six months<a class="cite" href="#S6">S6</a>, and a plan for post-market monitoring has to follow the risk level<a class="cite" href="#S5">S5</a>.
+          </p>
+          <div class="ev-note" data-state="ok" style="margin:0">
+            <span class="key">S6</span>
+            <span class="src">eur-lex.europa.eu · Article 19</span>
+            <blockquote>“Providers shall keep the logs … for a period appropriate to the intended purpose, of at least six months…”</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec">
+        <div class="s-label">METER</div>
+        <div class="s-body" style="max-width:320px">
+          <div class="kv"><span>Spend</span><span class="v">$0.21 / $0.60</span></div>
+          <div class="meter m-amber" aria-hidden="true"><i style="width:35%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Rules</h2><span class="mono faint">for whoever builds the next screen</span></div>
+      <div class="ledger">
+        <div class="row" style="grid-template-columns:74px minmax(0,1fr)">
+          <span class="key">01</span>
+          <span><span class="title" style="font-size:16px">Blue and violet are identities, not accents.</span>
+          <span class="sub">A button never takes an ink colour. Actions are paper, outline, or amber.</span></span>
+        </div>
+        <div class="row" style="grid-template-columns:74px minmax(0,1fr)">
+          <span class="key">02</span>
+          <span><span class="title" style="font-size:16px">Glass only where something floats.</span>
+          <span class="sub">The top bar, the approval sheet, the command palette. Never as a card background.</span></span>
+        </div>
+        <div class="row" style="grid-template-columns:74px minmax(0,1fr)">
+          <span class="key">03</span>
+          <span><span class="title" style="font-size:16px">One gradient in the whole product.</span>
+          <span class="sub">It marks a handoff between Gemini and Groq, and it appears nowhere else.</span></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

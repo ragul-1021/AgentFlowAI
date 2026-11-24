@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — New research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Dashboard</a>
+    <a href="live.html">Live run</a>
+    <a href="report.html">Reports</a>
+    <a href="approval.html">Approvals</a>
+    <a href="styleguide.html">System</a>
+  </nav>
+  <div class="topbar-end">
+    <a class="btn btn-quiet" href="index.html">Discard</a>
+    <span class="avatar" aria-hidden="true">MK</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="gutter" aria-label="Folio"><p class="folio">NEW RUN</p></aside>
+
+  <main class="main">
+    <div class="focus">
+
+      <p class="kicker">COMMISSION &nbsp;·&nbsp; PROJECT: INFRASTRUCTURE NOTES</p>
+      <h1 class="display sm">What should the two teams write?</h1>
+      <p class="lede">Describe the piece in your own words. The brief is the only thing Gemini and Groq are told; everything after this is derived from it.</p>
+
+      <form>
+
+        <div class="field">
+          <label class="flabel" for="topic">Subject <span class="opt">one paragraph is enough</span></label>
+          <textarea class="input input-lg" id="topic" name="topic" placeholder="What is the piece about, and what should a reader be able to do after finishing it?">Speculative decoding in production serving: which acceptance-rate claims survive contact with real traffic, and where the throughput win disappears. For backend engineers who already run vLLM or TGI.</textarea>
+        </div>
+
+        <div class="two">
+          <div class="field">
+            <label class="flabel" for="project">Project</label>
+            <select class="select" id="project" name="project">
+              <option>Infrastructure notes</option>
+              <option>Model economics</option>
+              <option>Compliance briefings</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="flabel" for="audience">Reader</label>
+            <input class="input" id="audience" name="audience" value="Backend engineers running inference at scale">
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="flabel" id="format-label">Form</span>
+          <div class="chips" role="radiogroup" aria-labelledby="format-label">
+            <label class="chip"><input type="radio" name="format" value="article" checked><span class="k">01</span>Technical article</label>
+            <label class="chip"><input type="radio" name="format" value="report"><span class="k">02</span>Research report</label>
+            <label class="chip"><input type="radio" name="format" value="brief"><span class="k">03</span>Decision brief</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="flabel" id="length-label">Length <span class="opt">checked against the outline</span></span>
+          <div class="chips" role="radiogroup" aria-labelledby="length-label">
+            <label class="chip"><input type="radio" name="length" value="short"><span class="k">800</span>Short</label>
+            <label class="chip"><input type="radio" name="length" value="standard" checked><span class="k">2,100</span>Standard</label>
+            <label class="chip"><input type="radio" name="length" value="long"><span class="k">3,400</span>Long</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="flabel">Questions it must answer <span class="opt">four is a good number</span></span>
+          <ul class="qlist">
+            <li class="qrow"><span class="n">01</span><input value="What acceptance rate do production teams actually see, versus the paper?" aria-label="Question 1"></li>
+            <li class="qrow"><span class="n">02</span><input value="How does draft length change the arithmetic at batch size 32?" aria-label="Question 2"></li>
+            <li class="qrow"><span class="n">03</span><input value="Which serving stacks support it today, and with what caveats?" aria-label="Question 3"></li>
+            <li class="qrow"><span class="n">04</span><input value="When is it not worth the extra memory?" aria-label="Question 4"></li>
+          </ul>
+        </div>
+
+        <div class="two">
+          <div class="field">
+            <label class="flabel" for="depth">Research depth</label>
+            <select class="select" id="depth" name="depth">
+              <option>Standard — up to 12 sources, 4 queries</option>
+              <option>Light — up to 6 sources, 2 queries</option>
+              <option>Deep — up to 18 sources, 6 queries</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="flabel" for="avoid">Leave out <span class="opt">optional</span></label>
+            <input class="input" id="avoid" name="avoid" placeholder="Benchmarks with no methodology">
+          </div>
+        </div>
+
+        <div class="commission">
+          <div class="est">
+            ESTIMATE &nbsp;·&nbsp; 9 SOURCES &nbsp;·&nbsp; 6 SECTIONS &nbsp;·&nbsp; $0.34–0.48<br>
+            CEILING &nbsp;·&nbsp; $0.60 &nbsp;·&nbsp; 400K TOKENS &nbsp;·&nbsp; 40 CALLS
+          </div>
+          <button class="btn btn-primary" type="submit">Commission run</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <aside class="margin" aria-label="What happens next">
+    <div class="panel">
+      <h3>What runs</h3>
+      <ol class="steps">
+        <li><b>Brief</b>Six questions, an audience, a word budget.</li>
+        <li><b>Research</b>Queries, four domains, quotes pulled per source.</li>
+        <li><b>Analysis</b>Findings, tensions, and the gaps nobody covers.</li>
+        <li><b>Outline</b>Sections with their own word targets.</li>
+        <li><b>Draft and edit</b>Groq writes; markers verified on the way out.</li>
+        <li><b>Validation</b>Every claim checked against its quote.</li>
+        <li><b>You</b>Nothing exports without a signature.</li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <h3>Budget</h3>
+      <div class="kv"><span>Research</span><span class="v">~$0.06</span></div>
+      <div class="kv"><span>Judgement</span><span class="v">~$0.14</span></div>
+      <div class="kv"><span>Writing</span><span class="v">~$0.21</span></div>
+      <div class="meter m-amber" aria-hidden="true"><i style="width:70%"></i></div>
+      <p class="mono faint" style="margin:0;line-height:1.7">A run that exceeds the ceiling stops and asks, rather than truncating quietly.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Inks</h3>
+      <div class="legend">
+        <span><i style="background:var(--blue)"></i>Gemini — research &amp; judgement</span>
+        <span><i style="background:var(--violet)"></i>Groq — writing &amp; editing</span>
+        <span><i style="background:var(--amber)"></i>Waiting on a person</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+</body>
+</html>

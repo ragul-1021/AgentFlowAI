@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — Live run 0142</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Dashboard</a>
+    <a href="live.html" aria-current="page">Live run</a>
+    <a href="report.html">Reports</a>
+    <a href="approval.html">Approvals</a>
+    <a href="styleguide.html">System</a>
+  </nav>
+  <div class="topbar-end">
+    <span class="state" data-s="now"><i class="dot"></i><span class="mono">live</span></span>
+    <a class="btn btn-quiet" href="index.html">Stop run</a>
+    <span class="avatar" aria-hidden="true">MK</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="gutter" aria-label="Folio"><p class="folio">RUN-0142</p></aside>
+
+  <main class="main">
+
+    <p class="kicker">RUN-0142 &nbsp;·&nbsp; DRAFTING &nbsp;·&nbsp; 02:31 ELAPSED</p>
+    <h1 class="display sm">Speculative decoding, tested against production traffic</h1>
+    <p class="lede">Started 14:08. Gemini sets the questions and checks the evidence; Groq writes and edits. Nine sources are attached so far.</p>
+
+    <section class="section" aria-labelledby="handoffs">
+      <div class="section-head">
+        <h2 id="handoffs">Handoffs</h2>
+        <span class="mono faint">5 of 10 complete · 1 writing</span>
+      </div>
+
+      <ol class="flow">
+        <li class="agent" data-t="gemini">
+          <div class="ahead"><span class="akey">A1</span><span class="aname">Brief</span><span class="atag">Gemini 3.5 Flash-Lite</span><span class="atime">1.8s</span></div>
+          <p class="aout">Narrowed the request to production serving. Six must-answer questions, 2,100 words, backend engineers.</p>
+        </li>
+
+        <li class="agent" data-t="gemini">
+          <div class="ahead"><span class="akey">A2</span><span class="aname">Research</span><span class="atag">Gemini + Tavily</span><span class="atime">24.2s</span></div>
+          <p class="aout">Nine sources across four domains. Thirty-one quotes kept; twelve duplicate URLs dropped before extraction.</p>
+        </li>
+
+        <li class="agent" data-t="gemini">
+          <div class="ahead"><span class="akey">A3</span><span class="aname">Analysis</span><span class="atag">Gemini 3.8 Flash</span><span class="atime">11.6s</span></div>
+          <p class="aout">Three findings, two gaps, one contested number. The vLLM result and the Medusa paper disagree on acceptance rate.</p>
+        </li>
+
+        <li class="agent" data-t="gemini">
+          <div class="ahead"><span class="akey">A4</span><span class="aname">Outline</span><span class="atag">Gemini 3.8 Flash</span><span class="atime">8.9s</span></div>
+          <p class="aout">Six sections, 2,100 words budgeted. §3 reserved for the throughput and latency trade-off.</p>
+        </li>
+
+        <li class="agent" data-t="groq">
+          <span class="handoff" aria-hidden="true"></span>
+          <div class="ahead"><span class="akey">B1</span><span class="aname">Writing §1–§3</span><span class="atag">Groq gpt-oss-120b</span><span class="atime">41.0s</span></div>
+          <p class="aout">Setup, the acceptance-rate model, and why draft length changes the arithmetic. 1,176 words.</p>
+        </li>
+
+        <li class="agent" data-t="now">
+          <div class="ahead"><span class="akey">B2</span><span class="aname">Writing §4</span><span class="atag">Groq gpt-oss-120b</span><span class="atime">12.4s</span></div>
+          <p class="aout">Measuring acceptance rates on real traffic — drafting now.</p>
+          <div class="meter m-amber" role="img" aria-label="Section 4 is 45 percent drafted"><i style="width:45%"></i></div>
+          <p class="mono faint" style="margin:8px 0 0">1,480 of 2,100 words &nbsp;·&nbsp; 3 citations placed in this section</p>
+        </li>
+
+        <li class="agent" data-t="next">
+          <div class="ahead"><span class="akey">B3</span><span class="aname">Editing</span><span class="atag">Groq gpt-oss-120b</span><span class="atime">—</span></div>
+          <p class="aout">Full pass after the draft closes. Citation markers verified on the way out.</p>
+        </li>
+
+        <li class="agent" data-t="next">
+          <div class="ahead"><span class="akey">A5</span><span class="aname">Validation</span><span class="atag">Gemini 3.8 Flash</span><span class="atime">—</span></div>
+          <p class="aout">Every claim checked against the quote that is supposed to support it.</p>
+        </li>
+
+        <li class="agent" data-t="next">
+          <div class="ahead"><span class="akey">A6</span><span class="aname">Quality gate</span><span class="atag">Deterministic</span><span class="atime">—</span></div>
+          <p class="aout">Coverage, citation density, and unsupported-claim count decide whether a person is needed.</p>
+        </li>
+
+        <li class="agent" data-t="next">
+          <div class="ahead"><span class="akey">H1</span><span class="aname">Approval</span><span class="atag">You</span><span class="atime">—</span></div>
+          <p class="aout">Nothing is exportable until you sign it.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="events">
+      <div class="section-head">
+        <h2 id="events">Event log</h2>
+        <span class="state" data-s="now"><i class="dot"></i><span class="mono">streaming</span></span>
+      </div>
+      <div class="events" role="log" aria-live="polite" aria-label="Run event log" tabindex="0">
+        <div class="ev"><time>14:11:38</time><span class="n" data-c="amber">stream</span><span>write §4 · 1,480 words · 3 citations</span></div>
+        <div class="ev"><time>14:11:34</time><span class="n">citation</span><span>[S2] attached to §4 ¶3 — “acceptance rate falls with draft depth”</span></div>
+        <div class="ev"><time>14:11:33</time><span class="n">citation</span><span>[S6] attached to §4 ¶2 — vLLM benchmark, 2.7× at temperature 0</span></div>
+        <div class="ev"><time>14:11:31</time><span class="n" data-c="violet">llm.call</span><span>groq/gpt-oss-120b · 7,912 in · 1,204 out</span></div>
+        <div class="ev"><time>14:11:29</time><span class="n">node.start</span><span>write §4</span></div>
+        <div class="ev"><time>14:11:28</time><span class="n">node.end</span><span>write §3 · 388 words · 9.1s</span></div>
+        <div class="ev"><time>14:10:45</time><span class="n">node.start</span><span>write §3</span></div>
+        <div class="ev"><time>14:10:44</time><span class="n">node.end</span><span>write §2 · 386 words · 8.4s</span></div>
+        <div class="ev"><time>14:10:02</time><span class="n">node.start</span><span>write §2</span></div>
+        <div class="ev"><time>14:10:01</time><span class="n">node.end</span><span>write §1 · 402 words · 9.6s</span></div>
+        <div class="ev"><time>14:09:19</time><span class="n" data-c="blue">handoff</span><span>gemini → groq · outline accepted</span></div>
+        <div class="ev"><time>14:09:19</time><span class="n">node.end</span><span>outline · 6 sections · 8.9s</span></div>
+        <div class="ev"><time>14:09:02</time><span class="n">node.start</span><span>outline</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="margin" aria-label="Run state">
+    <div class="panel">
+      <h3>Pipeline</h3>
+      <div class="kv"><span>Brief</span><span class="v">done</span></div>
+      <div class="kv"><span>Research</span><span class="v">done</span></div>
+      <div class="kv"><span>Analysis</span><span class="v">done</span></div>
+      <div class="kv"><span>Outline</span><span class="v">done</span></div>
+      <div class="kv" style="color:var(--amber)"><span>Draft</span><span class="v" style="color:var(--amber)">4 of 6</span></div>
+      <div class="kv"><span>Edit</span><span class="v">next</span></div>
+      <div class="kv"><span>Validate</span><span class="v">next</span></div>
+      <div class="kv"><span>Approval</span><span class="v">next</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>Artifacts</h3>
+      <div class="kv"><span>Brief</span><span class="v">v1</span></div>
+      <div class="kv"><span>Sources</span><span class="v">9</span></div>
+      <div class="kv"><span>Quotes</span><span class="v">31</span></div>
+      <div class="kv"><span>Outline</span><span class="v">6 §</span></div>
+      <div class="kv"><span>Draft</span><span class="v">4 of 6 §</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>Budget</h3>
+      <div class="kv"><span>Calls</span><span class="v">14 / 40</span></div>
+      <div class="meter m-blue" aria-hidden="true"><i style="width:35%"></i></div>
+      <div class="kv"><span>Tokens</span><span class="v">88k / 400k</span></div>
+      <div class="meter m-violet" aria-hidden="true"><i style="width:22%"></i></div>
+      <div class="kv"><span>Spend</span><span class="v">$0.21 / $0.60</span></div>
+      <div class="meter m-amber" aria-hidden="true"><i style="width:35%"></i></div>
+    </div>
+  </aside>
+</div>
+
+</body>
+</html>

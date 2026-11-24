@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — Approval</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Dashboard</a>
+    <a href="live.html">Live run</a>
+    <a href="report.html">Reports</a>
+    <a href="approval.html" aria-current="page">Approvals</a>
+    <a href="styleguide.html">System</a>
+  </nav>
+  <div class="topbar-end">
+    <a class="btn btn-quiet" href="report.html">Read the report</a>
+    <span class="avatar" aria-hidden="true">MK</span>
+  </div>
+</header>
+
+<div class="shell nomargin">
+  <aside class="gutter" aria-label="Folio"><p class="folio">0140</p></aside>
+
+  <main class="main">
+    <div class="focus">
+
+      <p class="kicker">RUN-0140 &nbsp;·&nbsp; REVISION 3 OF 3 &nbsp;·&nbsp; AUTOMATIC LOOP FINISHED</p>
+      <h1 class="display sm">One claim still has no source. The decision is yours.</h1>
+      <p class="lede">Twenty-two claims were checked against seven sources. Twenty-one hold. The gate will not pass the last one on its own, and three revisions are spent.</p>
+
+      <section class="section" aria-labelledby="summary">
+        <div class="section-head">
+          <h2 id="summary">Validation summary</h2>
+          <span class="mono faint">22 claims</span>
+        </div>
+
+        <div class="valbar" role="img" aria-label="19 claims supported, 2 partially supported, 1 unsupported">
+          <i class="a" style="width:86.4%"></i>
+          <i class="b" style="width:9.1%"></i>
+          <i class="c" style="width:4.5%"></i>
+        </div>
+        <div class="vallegend">
+          <span><i style="background:var(--blue)"></i>19 supported</span>
+          <span><i style="background:var(--amber)"></i>2 partial</span>
+          <span><i style="background:var(--brick)"></i>1 unsupported</span>
+        </div>
+
+        <div class="flag">
+          <p class="kicker" style="color:var(--brick-text)">§4 &nbsp;·&nbsp; LOGGING AND TRACEABILITY</p>
+          <p class="claim">“Providers must retain those logs for a minimum of ten years, and make them available to authorities on request.”</p>
+          <p class="why">Article 19 sets a floor of six months. Extended retention appears for deployers only where Union or national law already requires it. No source in this run supports ten years, and revision 3 left the sentence in place.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="changes">
+        <div class="section-head">
+          <h2 id="changes">What revision 3 changed</h2>
+          <span class="mono faint">Groq gpt-oss-120b</span>
+        </div>
+        <div class="ledger">
+          <div class="row" style="grid-template-columns:74px minmax(0,1fr)">
+            <span class="key">§2</span>
+            <span><span class="title" style="font-size:16px">Replaced an opinion about exemptions with the Article 6 wording.</span>
+            <span class="sub">Citation added to S2.</span></span>
+          </div>
+          <div class="row" style="grid-template-columns:74px minmax(0,1fr)">
+            <span class="key">§5</span>
+            <span><span class="title" style="font-size:16px">Cut a paragraph that restated §3 in different words.</span>
+            <span class="sub">Word count reduced by 140.</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="decide">
+        <div class="section-head">
+          <h2 id="decide">Your decision</h2>
+          <span class="mono faint">Signs version 3</span>
+        </div>
+
+        <div class="sheet">
+          <label class="field" for="notes">Notes for the writer, if you send it back</label>
+          <textarea id="notes" placeholder="The ten-year figure needs to come out. Replace it with the six-month floor and cite Article 19."></textarea>
+
+          <div class="actions">
+            <button class="btn">Send back with notes</button>
+            <button class="btn btn-amber-solid">Approve with the claim flagged</button>
+            <button class="btn btn-primary" aria-disabled="true" title="Resolve or flag the unsupported claim first">Approve and export</button>
+          </div>
+          <p class="hint">Export stays locked while a claim has no source. Flagging it stamps the claim as disputed in the PDF, the DOCX, and the citation appendix, and records your name next to it.</p>
+
+          <div class="sign">
+            <span>AWAITING SIGNATURE</span>
+            <span>2,040 WORDS &nbsp;·&nbsp; 7 SOURCES &nbsp;·&nbsp; 22 NOV 2026</span>
+          </div>
+        </div>
+
+        <p class="mono faint" style="margin-top:16px;line-height:1.7;max-width:70ch">
+          Approving locks this version and records your name against it. Any later edit creates version 4 and needs a fresh signature.
+        </p>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

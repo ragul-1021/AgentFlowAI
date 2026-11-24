@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentFlow AI — EU AI Act report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">AgentFlow<span class="mark">AI</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Dashboard</a>
+    <a href="live.html">Live run</a>
+    <a href="report.html" aria-current="page">Reports</a>
+    <a href="approval.html">Approvals</a>
+    <a href="styleguide.html">System</a>
+  </nav>
+  <div class="topbar-end">
+    <a class="btn" href="approval.html">Review and sign off</a>
+    <span class="avatar" aria-hidden="true">MK</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="gutter" aria-label="Folio"><p class="folio">0140 / V3</p></aside>
+
+  <main class="main">
+
+    <p class="kicker">REPORT-0140 &nbsp;·&nbsp; VERSION 3 &nbsp;·&nbsp; AWAITING DECISION</p>
+    <h1 class="display sm">EU AI Act: what shipping teams must document</h1>
+
+    <div class="toolbar">
+      <div class="versions" role="group" aria-label="Report version">
+        <button class="vpill is-on" aria-pressed="true">v3</button>
+        <button class="vpill" aria-pressed="false">v2</button>
+        <button class="vpill" aria-pressed="false">v1</button>
+      </div>
+      <div class="toolbar-end">
+        <button class="btn btn-quiet">Compare versions</button>
+        <button class="btn">Export</button>
+      </div>
+    </div>
+
+    <div class="docmeta">
+      <span>2,040 WORDS</span>
+      <span>7 SOURCES</span>
+      <span>22 CLAIMS</span>
+      <span>REVISION 3 OF 3</span>
+      <span>22 NOV 14:02</span>
+    </div>
+
+    <div class="notice" role="status">
+      <span>Three automatic revisions are spent and one claim is still unsupported. The gate is holding for a person.</span>
+      <a href="approval.html">Open the decision</a>
+    </div>
+
+    <article class="reader">
+
+      <h2 class="doc-h2"><span class="snum">1</span><span>Why documentation is now a shipping gate</span></h2>
+      <p class="indent">Since 2 August 2026 the documentation duties for high-risk systems are enforceable, and they attach to the provider rather than to the deployment. That shift matters for engineering teams: the artefact is no longer a compliance appendix written after launch, it is a build output that has to exist before the system is placed on the market.<a class="cite" href="#S1" data-cite="S1">S1</a></p>
+      <p class="indent">A useful test is whether the pack would let a competent engineer who has never seen the system reproduce its risk assessment. If it would not, the pack is marketing.</p>
+
+      <h2 class="doc-h2"><span class="snum">2</span><span>What counts as a high-risk system</span></h2>
+      <p class="indent">Classification is not a judgement about how capable a model is. Annex III lists the contexts of use that trigger it — employment, education, essential services, migration, and several others — and a system can be high-risk while being technically simple.<a class="cite" href="#S3" data-cite="S3">S3</a></p>
+      <p class="indent">Two exemptions are worth knowing: a system that performs a narrow procedural task, and one that only detects patterns without replacing human assessment. Both are narrow, and the burden of arguing them sits with the provider.<a class="cite" href="#S2" data-cite="S2">S2</a></p>
+
+      <h2 class="doc-h2"><span class="snum">3</span><span>The technical documentation pack</span></h2>
+      <p class="indent">Annex IV is the closest thing to a specification. It asks for nine areas, from a general description of the system through risk management, standards applied, and the evaluation of accuracy and robustness.<a class="cite" href="#S7" data-cite="S7">S7</a></p>
+      <p class="indent">Most of these are documents a competent team already produces somewhere. The work is not writing new prose; it is gathering what exists and making it traceable to a version of the system.</p>
+
+      <h2 class="doc-h2"><span class="snum">4</span><span>Logging and traceability</span></h2>
+      <p class="indent">Article 19 requires providers to keep automatically generated logs for a period appropriate to the intended purpose, and sets a floor of six months. The logs have to allow the identification of events relevant to traceability and monitoring.<a class="cite" href="#S6" data-cite="S6">S6</a></p>
+      <p class="indent">Providers must retain those logs for a minimum of <span class="claim-bad">ten years</span>, and make them available to authorities on request.<a class="cite cite-bad" href="#X1" data-cite="X1" title="No source supports this">?</a></p>
+
+      <h2 class="doc-h2"><span class="snum">5</span><span>Post-market monitoring</span></h2>
+      <p class="indent">A post-market monitoring plan is a separate artefact from the technical file, and it has to be proportionate to the risk. It is where you say what you will measure after release, how often, and who reads the result.<a class="cite" href="#S5" data-cite="S5">S5</a></p>
+      <p class="indent">The common failure is a plan that measures model quality in aggregate but cannot answer a question about a single affected person.</p>
+
+      <h2 class="doc-h2"><span class="snum">6</span><span>A checklist you can hand to an engineer</span></h2>
+      <p class="indent">Four questions cover most of the gap: which version of the system is this pack about, which Annex IV item does this document satisfy, who signs the risk assessment, and what would trigger a re-assessment.</p>
+      <p class="indent">None of this is exotic. It is the ordinary discipline of shipping software, written down far enough in advance that someone else can audit it.</p>
+
+    </article>
+  </main>
+
+  <aside class="margin" aria-label="Evidence for the current passage">
+    <div class="evidence">
+      <div class="panel">
+        <h3>Evidence</h3>
+        <div class="kv" style="padding-top:0"><span>Sources</span><span class="v">7</span></div>
+        <div class="kv"><span>Claims checked</span><span class="v">22</span></div>
+        <div class="kv"><span>Unsupported</span><span class="v" style="color:var(--brick-text)">1</span></div>
+        <p class="mono faint" style="margin:14px 0 0;line-height:1.7">Hover a marker in the text to bring its source forward.</p>
+      </div>
+
+      <div class="ev-note" data-key="S1" data-state="ok">
+        <span class="key">S1</span>
+        <span class="src">eur-lex.europa.eu · Regulation 2024/1689</span>
+        <blockquote>“Providers of high-risk AI systems shall ensure that the system undergoes the relevant conformity assessment procedure…”</blockquote>
+        <span class="verdict">Supports the enforcement date and the provider duty.</span>
+      </div>
+
+      <div class="ev-note" data-key="S3" data-state="ok">
+        <span class="key">S3</span>
+        <span class="src">digital-strategy.ec.europa.eu · high-risk classification</span>
+        <blockquote>“An AI system is classified as high-risk where it falls under one of the areas listed in Annex III…”</blockquote>
+        <span class="verdict">Supports the context-of-use argument.</span>
+      </div>
+
+      <div class="ev-note" data-key="S2" data-state="ok">
+        <span class="key">S2</span>
+        <span class="src">artificialintelligenceact.eu · Article 6</span>
+        <blockquote>“A system referred to in Annex III shall not be considered high-risk where it does not pose a significant risk of harm…”</blockquote>
+        <span class="verdict">Supports the narrow-exemption sentence.</span>
+      </div>
+
+      <div class="ev-note" data-key="S7" data-state="ok">
+        <span class="key">S7</span>
+        <span class="src">artificialintelligenceact.eu · Annex IV</span>
+        <blockquote>“Technical documentation referred to in Article 11 shall contain at least the following information…”</blockquote>
+        <span class="verdict">Supports the nine-area summary.</span>
+      </div>
+
+      <div class="ev-note" data-key="S6" data-state="ok">
+        <span class="key">S6</span>
+        <span class="src">eur-lex.europa.eu · Article 19</span>
+        <blockquote>“Providers shall keep the logs … for a period appropriate to the intended purpose of the high-risk AI system, of at least six months…”</blockquote>
+        <span class="verdict">Supports the six-month floor.</span>
+      </div>
+
+      <div class="ev-note" data-key="X1" data-state="bad">
+        <span class="key">UNSUPPORTED</span>
+        <span class="src">no source in this run matches the ten-year figure</span>
+        <blockquote>Article 19 sets six months. Extended retention appears for deployers only where Union or national law already requires it; nothing in the pack supports ten years.</blockquote>
+        <span class="verdict">Flagged 14:02 by validation. Revision 3 kept the sentence.</span>
+      </div>
+
+      <div class="ev-note" data-key="S5" data-state="ok">
+        <span class="key">S5</span>
+        <span class="src">iapp.org · post-market monitoring analysis</span>
+        <blockquote>“The post-market monitoring plan shall be proportionate to the nature and the risks of the AI system…”</blockquote>
+        <span class="verdict">Supports proportionality wording.</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
